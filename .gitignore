@@ -1,0 +1,11 @@
+# Go build
+*.exe
+*.log
+*.out
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.bak
