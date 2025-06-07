@@ -52,6 +52,10 @@ func readINI() map[string]string {
 
 func buildFormatString(maxres string) string {
 	switch strings.ToLower(maxres) {
+	case "480p":
+		return "bestvideo[height<=480]+bestaudio/best[height<=480]"
+	case "720p":
+		return "bestvideo[height<=720]+bestaudio/best[height<=720]"
 	case "1080p":
 		return "bestvideo[height<=1080]+bestaudio/best[height<=1080]"
 	case "4k":
