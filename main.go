@@ -14,7 +14,13 @@ func logLine(line string) {
 	if !debugMode {
 		return
 	}
-	logFile := "yt-dlp.log"
+	exPath, err := os.Executable()
+	if err != nil {
+		logLine("Failed to resolve executable path: " + err.Error())
+		os.Exit(1)
+	}
+	exDir := filepath.Dir(exPath)
+	logFile := filepath.Join(exDir, "yt-dlp.log")
 	timestamp := time.Now().Format("2006-01-02 15:04:05")
 	f, _ := os.OpenFile(logFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	defer f.Close()
@@ -28,7 +34,13 @@ func readINI() map[string]string {
 		"ffmpeg-path": "",
 		"debug":       "true", // default to true if not provided
 	}
-	data, err := ioutil.ReadFile("yt-dlp.ini")
+	exPath, err := os.Executable()
+	if err != nil {
+		logLine("Failed to resolve executable path: " + err.Error())
+		os.Exit(1)
+	}
+	exDir := filepath.Dir(exPath)
+	data, err := ioutil.ReadFile(filepath.Join(exDir, "yt-dlp.ini"))
 	if err != nil {
 		logLine("INI not found, using default settings")
 		return config
