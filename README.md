@@ -1,14 +1,16 @@
 # yt-dlp-hd
 
-A lightweight wrapper around `yt-dlp` to enforce high resolution (upto 4K) downloading of YouTube videos via Playnite.
+A lightweight wrapper around `yt-dlp` to enforce high resolution (upto 4K) downloading of YouTube videos via Playnite's Extra Metadata Loader add-on.
 
 ## Installation
 
-1. Download the latest release and move the files to a suitable location ie. C:\Playnite\yt-dlp-wrapper.
-2. Do NOT overwrite or place in the same folder as the original yt-dlp.exe!
+1. Download the latest release and extract the zip file into folder "yt-dlp-hd".
+2. Place the folder in a suitable folder such as C:\Playnite\video-tools.
 3. Update the included yt-dlp.ini file as per the settings below.
 4. In ExtraMetadataLoader's settings, point the YT-DLP path to the wrapper's folder.
 5. Test download a YouTube video trailer for an existing game. Ensure the video you want to download is high res (not all are).
+
+You can watch a video of the setup process here: https://www.youtube.com/watch?v=zXiarzc5iJA
 
 ## Configuration
 
@@ -32,4 +34,4 @@ debug=false
 
 ## Removing/Uninstalling
 
-To remove or uninstall simply delete the wrapper folder and repoint YT-DLP in ExtraMetadata's add-on setting to the original .exe.
+To remove or uninstall simply delete the yt-dlp-hd folder and repoint YT-DLP in ExtraMetadata's add-on setting to the original .exe.
