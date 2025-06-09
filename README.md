@@ -20,7 +20,7 @@ Edit the `yt-dlp.ini` file in the wrapper's folder:
 ### INI Settings
 
 - maxres - Set the maximum resolution for the video. Available options are: Best, 4k, 1080p, 720p, 480p. If the resolution you specifiy isn't available to download then it will grab the next best quality.
-- yt-dlp-path - Set the path to the folder where the original yt-dlp.exe is stored (do not include yt-dlp.exe in the path)
+- yt-dlp-path - Set the path to the folder where the original yt-dlp.exe binary is stored.
 - ffmpeg-path - Set the path to the folder where the ffmpeg.exe binary is installed.
 - debug - Set to "true" to log the output to yt-dlp.log or false for no logging.
 
@@ -28,8 +28,8 @@ Edit the `yt-dlp.ini` file in the wrapper's folder:
 
 ```ini
 maxres=1080p
-yt-dlp-path=C:\Playnite\tools\yt-dlp
-ffmpeg-path=C:\Playnite\tools\ffmpeg\bin
+yt-dlp-path=C:\Playnite\video-tools\yt-dlp
+ffmpeg-path=C:\Playnite\video-tools\ffmpeg\bin
 debug=false
 ```
 
